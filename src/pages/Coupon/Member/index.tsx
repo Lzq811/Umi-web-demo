@@ -3,9 +3,11 @@ import { useLocation } from '@umijs/max'
 
 export default function MemberCoupon () {
 
-  const Loca = useLocation()
+  const Loca:any = useLocation()
+
+  console.log(Loca)
 
   return (
-    <div>Member coupon {Loca.pathname} {Loca.search}</div>
+    <div>Member coupon {Loca.pathname} search:{Loca.search}</div>
   )
 }

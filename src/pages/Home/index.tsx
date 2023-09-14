@@ -6,16 +6,13 @@ import { useModel, history } from '@umijs/max'
 import styles from './index.less'
 
 const HomePage: React.FC = () => {
-  const { name } = useModel('global');
+  const { name } = useModel('global')
 
   const Jump = () => {
     history.push({
       pathname: '/coupon/member',
       search: '?id=123123'
     })
-    /* history.push('/coupon/member', {
-      id: '123123'
-    }) */
   }
 
   return (
