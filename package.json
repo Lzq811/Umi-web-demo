@@ -1,29 +1,43 @@
 {
   "private": true,
-  "author": "York-Lau <liuzq811@163.com>",
+  "author": "liuzq811@163.com <liuzq811@163.com>",
   "scripts": {
+    "dev": "cross-env UMI_ENV=dev max dev",
+    "test": "cross-env UMI_ENV=test max dev",
+    "prod": "cross-env UMI_ENV=prod max dev",
     "build": "max build",
-    "dev": "max dev",
+    "build--test": "cross-env UMI_ENV=test max build",
+    "build--prod": "cross-env UMI_ENV=prod max build",
     "format": "prettier --cache --write .",
+    "prepare": "husky",
     "postinstall": "max setup",
-    "prepare": "husky install",
     "setup": "max setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "start--test": "npm run test",
+    "start--prod": "npm run prod"
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/pro-components": "^2.4.4",
-    "@umijs/max": "^4.0.79",
-    "antd": "^5.4.0"
+    "@umijs/max": "^4.3.14",
+    "antd": "^5.4.0",
+    "axios": "^1.7.5",
+    "cross-env": "^7.0.3",
+    "jsencrypt": "^3.3.2",
+    "jsrsasign": "^11.1.0",
+    "jsrsasign-util": "^1.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
-    "husky": "^8.0.3",
+    "husky": "^9",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "prettier-plugin-organize-imports": "^3.2.2",
     "prettier-plugin-packagejson": "^2.4.3",
     "typescript": "^5.0.3"
+  },
+  "volta": {
+    "node": "20.9.0"
   }
 }

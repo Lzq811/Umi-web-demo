@@ -1,14 +1,13 @@
-import React from 'react'
-import {Button} from 'antd'
-import { history, Link } from '@umijs/max'
-export default function Login () {
+import { FC } from 'react'
+import styles from './index.less'
+import LoginForm from './loginForm'
+
+const Login: FC = () => {
   return (
-    <div>
-      <Button type='primary' onClick={() => { history.push('/home') }}>to home</Button>
-      <br />
-      <br />
-      <br />
-      <Link to='/table'>to CRUD</Link>
+    <div className={styles.page}>
+      <LoginForm />
     </div>
   )
 }
+
+export default Login
