@@ -5,8 +5,8 @@ const resolve = (dir: string) => require('path').join(__dirname, dir)
 
 export default defineConfig({
   antd: {
-    style: 'less',
-    momentPicker: true // 配置 antd 的 DatePicker、TimePicker、Calendar 组件是否使用 moment 作为日期处理库，默认为 false。
+    style: 'less'
+    // momentPicker: true // 配置 antd 的 DatePicker、TimePicker、Calendar 组件是否使用 moment 作为日期处理库，默认为 false-dayjs。
   },
   alias: {
     shared: resolve('/shared')
