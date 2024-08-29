@@ -22,8 +22,9 @@ export default defineConfig({
   routes: routes,
   define: {
     'process.env': {
-      BASE_URL: process.env.BASE_URL,
-      PORT: process.env.PORT
+      BASE_URL: 'http://47.106.154.148:8081',
+      UMI_ENV: 'dev',
+      NODE_ENV: process.env.NODE_ENV
     }
   },
   npmClient: 'yarn'
