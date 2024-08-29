@@ -4,17 +4,17 @@
   "scripts": {
     "build": "max build",
     "build--prod": "cross-env UMI_ENV=formal max build",
-    "build--test": "cross-env UMI_ENV=uat max build",
-    "dev": "cross-env PORT=8092 max dev",
+    "build--uat": "cross-env UMI_ENV=uat max build",
     "format": "prettier --cache --write .",
     "postinstall": "max setup",
     "prepare": "husky",
-    "prod": "cross-env PORT=8092 UMI_ENV=formal max dev",
     "setup": "max setup",
     "start": "npm run dev",
+    "start--test": "npm run uat",
     "start--prod": "npm run prod",
-    "start--test": "npm run test",
-    "uat": "cross-env PORT=8092 UMI_ENV=uat max dev"
+    "dev": "cross-env PORT=8092 max dev",
+    "uat": "cross-env PORT=8092 UMI_ENV=uat max dev",
+    "prod": "cross-env PORT=8092 UMI_ENV=formal max dev"
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
