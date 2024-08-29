@@ -15,6 +15,13 @@ export default defineConfig({
     shared: resolve('/shared')
     // umi自动配置了 '@/'指向 'src/'
   },
+  locale: {
+    antd: true,
+    default: 'zh-CN',
+    baseSeparator: '-',
+    useLocalStorage: true,
+    title: true
+  },
   outputPath: 'dist', // 打包目录名称
   access: {},
   model: {},
