@@ -1,3 +1,8 @@
+/**
+ * 使用约定式路由时，约定 src/pages 下所有的 (j|t)sx? 文件即路由
+ * ! @/pages 指向 src/pages 目录
+ * ! ./ 也默认指向 src/pages 目录
+ */
 const routes = [
   {
     path: '/',
@@ -19,9 +24,14 @@ const routes = [
     component: './Access'
   },
   {
-    name: ' CRUD 示例',
+    name: '系统管理',
     path: '/table',
-    component: './Table'
+    component: './Table',
+    routes: [
+      { name: '系统设置', path: '/table', component: '@/pages/Access' },
+      { name: '菜单设置', path: '/table/access', component: '@/pages/Access' },
+      { name: '按钮设置', path: '/table/btns', component: '@/pages/Table' }
+    ]
   }
 ]
 

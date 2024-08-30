@@ -15,6 +15,9 @@ export default defineConfig({
     shared: resolve('/shared')
     // umi自动配置了 '@/'指向 'src/'
   },
+  layout: {
+    title: '环球控股'
+  },
   locale: {
     antd: true,
     default: 'zh-CN',
@@ -27,9 +30,6 @@ export default defineConfig({
   model: {},
   initialState: {},
   request: {},
-  layout: {
-    title: '@umijs/max'
-  },
   routes: routes,
   define: {
     'process.env': {
