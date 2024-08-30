@@ -31,6 +31,8 @@ export const layout: RunTimeLayoutConfig = () => {
       gapX: 100,
       gapY: 100,
       fontSize: 10
-    } // 配置水印： https://procomponents.ant.design/components/water-mark\
+    }, // 配置水印： https://procomponents.ant.design/components/water-mark\
+    pageTitleRender: false, // 不渲染页面标题
+    breadcrumbRender: false // 不渲染页面面包屑
   }
 }
