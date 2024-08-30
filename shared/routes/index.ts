@@ -25,10 +25,11 @@ const routes = [
   },
   {
     name: '系统管理',
+    icon: 'HomeFilled', // https://ant.design/components/icon-cn
     path: '/table',
     component: './Table',
     routes: [
-      { name: '系统设置', path: '/table', component: '@/pages/Access' },
+      { name: '系统设置', icon: 'SettingOutlined', path: '/table', component: '@/pages/Access' },
       { name: '菜单设置', path: '/table/access', component: '@/pages/Access' },
       { name: '按钮设置', path: '/table/btns', component: '@/pages/Table' }
     ]
