@@ -1,8 +1,8 @@
+import CustomPageContainer from '@/components/CustomPageContainer'
 import services from '@/services/demo'
 import {
   ActionType,
   FooterToolbar,
-  PageContainer,
   ProDescriptions,
   ProDescriptionsItemProps,
   ProTable
@@ -138,7 +138,7 @@ const TableList: React.FC<unknown> = () => {
   ]
 
   return (
-    <PageContainer ghost>
+    <CustomPageContainer>
       <ProTable<API.UserInfo>
         headerTitle="查询表格"
         actionRef={actionRef}
@@ -248,7 +248,7 @@ const TableList: React.FC<unknown> = () => {
           />
         )}
       </Drawer>
-    </PageContainer>
+    </CustomPageContainer>
   )
 }
 

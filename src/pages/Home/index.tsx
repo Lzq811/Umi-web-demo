@@ -1,19 +1,10 @@
-import Guide from '@/components/Guide'
-import { trim } from '@/utils/format'
-import { PageContainer } from '@ant-design/pro-components'
-import { useModel } from '@umijs/max'
-
-import styles from './index.less'
+import CustomPageContainer from '@/components/CustomPageContainer'
 
 const HomePage: React.FC = () => {
-  const { name } = useModel('global')
-  // console.log('2222222222', process.env.BASE_URL)
   return (
-    <PageContainer ghost>
-      <div className={styles.container}>
-        <Guide name={trim(name)} />
-      </div>
-    </PageContainer>
+    <CustomPageContainer>
+      <div>hello world</div>
+    </CustomPageContainer>
   )
 }
 
